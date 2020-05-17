@@ -1,0 +1,17 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: nacos-provider
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.17:8848
+        service: nacos-provider  #当前服务的名称，默认为${spring.application.name}
+        weight: 1  #服务的权重，取值[1, 100]，默认为1
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
