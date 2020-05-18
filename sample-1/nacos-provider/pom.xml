@@ -14,7 +14,6 @@
     <artifactId>nacos-provider</artifactId>
     <version>1.0.0</version>
     <name>nacos-provider</name>
-    <description>SpringCloudAlibaba示例项目-sample1-整合Nacos</description>
 
     <dependencies>
         <dependency>

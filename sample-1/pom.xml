@@ -10,8 +10,10 @@
         <version>1.0.0</version>
     </parent>
 
+    <groupId>com.greedystar</groupId>
     <artifactId>sample-1</artifactId>
     <packaging>pom</packaging>
+    <description>SpringCloudAlibaba示例项目-sample1-整合Nacos</description>
 
     <modules>
         <module>nacos-provider</module>
