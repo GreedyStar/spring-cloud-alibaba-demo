@@ -1,3 +1,4 @@
 # spring-cloud-alibaba-demo
 SpringCloudAlibaba 学习笔记项目，包括：
-- sample-1：Nacos 服务注册发现
+- sample-1：Nacos 作为服务注册中心实现服务注册与发现
+- sample-2：Nacos 作为配置中心实现外部集中化配置管理、动态配置更新、基于的profile的配置环境切换
