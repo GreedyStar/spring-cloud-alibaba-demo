@@ -10,10 +10,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <groupId>com.greedystar</groupId>
     <artifactId>nacos-consumer</artifactId>
-    <version>1.0.0</version>
-    <name>nacos-consumer</name>
 
     <dependencies>
         <dependency>

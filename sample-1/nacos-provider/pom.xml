@@ -10,10 +10,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>com.greedystar</groupId>
     <artifactId>nacos-provider</artifactId>
-    <version>1.0.0</version>
-    <name>nacos-provider</name>
 
     <dependencies>
         <dependency>
