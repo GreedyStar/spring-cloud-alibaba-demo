@@ -13,7 +13,7 @@ public class ExceptionUtil {
      */
     public static String handleTest1(BlockException ex) {
         ex.printStackTrace();
-        return "block Sentinel from static method";
+        return "流量控制 : test1";
     }
 
 }

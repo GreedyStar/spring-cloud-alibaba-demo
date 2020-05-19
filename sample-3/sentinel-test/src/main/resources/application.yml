@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: sentinel-test
+  cloud:
+    sentinel:
+      transport:
+        port: 8103
+        dashboard: localhost:8899
 
 management:
   endpoints:

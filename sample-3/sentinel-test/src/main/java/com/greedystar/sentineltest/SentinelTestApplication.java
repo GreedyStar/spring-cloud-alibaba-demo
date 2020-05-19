@@ -25,18 +25,18 @@ public class SentinelTestApplication {
      * 定义规则
      */
     private static void initFlowRules() {
-        List<FlowRule> rules = new ArrayList<>();
-        FlowRule rule = new FlowRule();
-        rule.setResource("test1");
-        rule.setGrade(RuleConstant.FLOW_GRADE_QPS);
-        rule.setCount(1);
-        rules.add(rule);
-        rule = new FlowRule();
-        rule.setResource("test2");
-        rule.setGrade(RuleConstant.FLOW_GRADE_QPS);
-        rule.setCount(1);
-        rules.add(rule);
-        FlowRuleManager.loadRules(rules);
+//        List<FlowRule> rules = new ArrayList<>();
+//        FlowRule rule = new FlowRule();
+//        rule.setResource("test1");
+//        rule.setGrade(RuleConstant.FLOW_GRADE_QPS);
+//        rule.setCount(1);
+//        rules.add(rule);
+//        rule = new FlowRule();
+//        rule.setResource("test2");
+//        rule.setGrade(RuleConstant.FLOW_GRADE_QPS);
+//        rule.setCount(1);
+//        rules.add(rule);
+//        FlowRuleManager.loadRules(rules);
     }
 
 }
