@@ -1,0 +1,43 @@
+server:
+  port: 8006
+spring:
+  application:
+    name: gateway
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: gateway  # 当前服务的名称，默认为 ${spring.application.name}
+        weight: 1  # 服务的权重，取值[1, 100]，默认为1
+        namespace: dcf082f8-34af-4f4b-9ef6-d05150cdfe7a
+    gateway:
+      discovery:
+        locator:
+          lower-case-service-id: true
+      routes:
+        - id: user_route   # rote_id会作为sentinel的资源
+          uri: lb://dubbo-consumer
+          predicates:
+            - Path=/v1/users/**
+          filters:
+            - StripPrefix=1
+        - id: role_route
+          uri: lb://dubbo-provider
+          predicates:
+            - Path=/v1/roles/**
+          filters:
+            - StripPrefix=1
+    sentinel:
+      transport:
+        port: 8103
+        dashboard: localhost:8899
+      datasource: # 持久化sentinel规则
+        flow: # 流控规则数据源配置
+          nacos:
+            server-addr: localhost:8848
+            data-id: gateway-sentinel-flow
+            group-id: SENTINEL_RULES
+            data-type: json
+            rule-type: flow
