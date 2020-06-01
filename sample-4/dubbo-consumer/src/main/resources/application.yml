@@ -1,0 +1,20 @@
+server:
+  port: 8005
+spring:
+  application:
+    name: dubbo-consumer
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        service: dubbo-consumer  # 当前服务的名称，默认为 ${spring.application.name}
+        weight: 1  # 服务的权重，取值[1, 100]，默认为1
+        namespace: dcf082f8-34af-4f4b-9ef6-d05150cdfe7a
+dubbo:
+  application:
+    name: dubbo-consumer
+  consumer:
+    registry: # 单注册中心
+      address: nacos://127.0.0.1:8848
+      parameters[namespace]: ed48fa98-8c91-4ada-b508-3b5674e84e59
+    timeout: 5000
