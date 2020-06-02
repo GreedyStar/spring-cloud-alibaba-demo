@@ -9,14 +9,14 @@ spring:
         server-addr: 127.0.0.1:8848
         service: dubbo-provider  # 当前服务的名称，默认为 ${spring.application.name}
         weight: 1  # 服务的权重，取值[1, 100]，默认为1
-        namespace: dcf082f8-34af-4f4b-9ef6-d05150cdfe7a
+        namespace: 274b2bb3-64ae-4029-87bb-a94ae3e0bc35
 dubbo:
   application:
     name: dubbo-provider
   provider: # 作为提供者的配置
     registry: # 单注册中心
       address: nacos://127.0.0.1:8848
-      parameters[namespace]: ed48fa98-8c91-4ada-b508-3b5674e84e59
+      parameters[namespace]: 0d41899c-dfd9-4e46-bb48-ccbfded3d79b
     protocol:
       name: dubbo
       port: 20880

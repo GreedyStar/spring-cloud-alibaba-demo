@@ -11,14 +11,14 @@ spring:
       datasource: # 持久化sentinel规则
         degrade: # 熔断降级规则数据源配置
           nacos:
-            server-addr: localhost:8848
+            server-addr: 127.0.0.1:8848
             data-id: sentinel-test-degrade
             group-id: SENTINEL_RULES
             data-type: json
             rule-type: degrade  # flow,degrade,authority,system, param-flow
         flow: # 流控规则数据源配置
           nacos:
-            server-addr: localhost:8848
+            server-addr: 127.0.0.1:8848
             data-id: sentinel-test-flow
             group-id: SENTINEL_RULES
             data-type: json

@@ -11,8 +11,8 @@ spring:
         server-addr: 127.0.0.1:8848
         service: gateway  # 当前服务的名称，默认为 ${spring.application.name}
         weight: 1  # 服务的权重，取值[1, 100]，默认为1
-        namespace: dcf082f8-34af-4f4b-9ef6-d05150cdfe7a
-    gateway:
+        namespace: 274b2bb3-64ae-4029-87bb-a94ae3e0bc35
+    gateway: # 配置gateway路由规则
       discovery:
         locator:
           lower-case-service-id: true
@@ -29,14 +29,14 @@ spring:
             - Path=/v1/roles/**
           filters:
             - StripPrefix=1
-    sentinel:
+    sentinel: # 配置gate的sentinel流控规则
       transport:
         port: 8103
         dashboard: localhost:8899
       datasource: # 持久化sentinel规则
         flow: # 流控规则数据源配置
           nacos:
-            server-addr: localhost:8848
+            server-addr: 127.0.0.1:8848
             data-id: gateway-sentinel-flow
             group-id: SENTINEL_RULES
             data-type: json
