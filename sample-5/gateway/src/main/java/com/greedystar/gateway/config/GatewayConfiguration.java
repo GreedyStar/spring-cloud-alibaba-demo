@@ -23,8 +23,7 @@ public class GatewayConfiguration {
     private final List<ViewResolver> viewResolvers;
     private final ServerCodecConfigurer serverCodecConfigurer;
 
-    public GatewayConfiguration(ObjectProvider<List<ViewResolver>> viewResolversProvider,
-                                ServerCodecConfigurer serverCodecConfigurer) {
+    public GatewayConfiguration(ObjectProvider<List<ViewResolver>> viewResolversProvider, ServerCodecConfigurer serverCodecConfigurer) {
         this.viewResolvers = viewResolversProvider.getIfAvailable(Collections::emptyList);
         this.serverCodecConfigurer = serverCodecConfigurer;
     }
