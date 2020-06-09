@@ -22,7 +22,7 @@ import java.util.List;
 public class SentinelTestApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SentinelTestApplication.class);
+        SpringApplication.run(SentinelTestApplication.class, args);
     }
 
     /**
